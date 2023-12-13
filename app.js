@@ -1,16 +1,17 @@
 
+
     // Initial Ratings
     const ratings = {
-    song1: 4.7,
-    song2: 3.4,
-    song3: 2.3,
-    song4: 3.6,
-    song5: 4.1,
-    song6: 3.5,
-    song7: 4.5,
-    song8: 1.7,
-    song9: 2.2, 
-    song10: 3.3
+    song1: 1.0,
+    song2: 1.0,
+    song3: 1.0,
+    song4: 1.0,
+    song5: 1.0,
+    song6: 1.0,
+    song7: 1.0,
+    song8: 1.0,
+    song9: 1.0, 
+    song10: 1.0
     }
 
   // Total Stars
@@ -130,6 +131,17 @@
           }
         }
     }
+    // Links
+   function songChords(link) {
+    window.open(link.value);
+   }
+
+
+    // save to local storage
+    
+
+
+
 
     // Rating Sort
     // function ratingSort() {
@@ -139,3 +151,51 @@
     //     x.innerHTML = ratings.sort();
 
     // }
+
+
+
+// const items = [
+//   { song: "Way Maker", author: "Sinach" },
+//   { song: "Breakthrough", author: "Eddie James" },
+//   { song: "Let the Heavens Open", author: "Christina D'Clario"},
+//   { song: "See a Victory", author: "Elevation Worship"},
+//   { song: "Famous For", author: "Tauren Wells"},
+//   { song: "Glorious Day", author: "Kristian Stanfill"},
+//   { song: "Throne Room", author: "Charity Gayle"},
+//   { song: "He's Alive", author: "Eddie James"},
+//   { song: "Ever Be", author: "Aaron Shust"},
+//   { song: "Do It Again", author: "Elevation Worship"},
+// ];
+
+
+
+//document.querySelectorAll(".items").forEach(a=>a.style.display = "initial");
+
+
+// document.getElementsByTagName('td')[0] = items.song[0];
+// document.getElementsByTagName("TD")[1] = items.author[0];
+//console.log(document.getElementsByTagName("TD")[0] = items.song[0]);
+
+// function getItems() {
+//   document.querySelector(`.${items} .items`).innerHTML = items.song[0];
+// }
+
+
+
+// // sort by value
+// items.sort((a, b) => a.value - b.value);
+
+// // sort by name
+// items.sort((a, b) => {
+//   const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+//   const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+//   if (nameA < nameB) {
+//     return -1;
+//   }
+//   if (nameA > nameB) {
+//     return 1;
+//   }
+
+//   // names must be equal
+//   return 0;
+// });
