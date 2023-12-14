@@ -1,14 +1,26 @@
 body {
     background-color: antiquewhite;
 }
+#welcome {
+  display: flex;
+  justify-content: center;
+  color: violet;
+}
 #chord{
   background-color: antiquewhite;
 }
+#view-like1, #view-like2, #view-like3, #view-like4, #view-like5, #view-like6, #view-like7, #view-like8, #view-like9, #view-like10{
+  background-color: antiquewhite;
+}
+#count {
+  margin-top: 5px;
+  padding-left: 15px;
+}
 #songSort{
-    background-color:lightblue;
+    background-color:violet;
 }
 #authorSort{
-    background-color: lightblue;
+    background-color: violet;
 }
 #ratingSort {
     background-color: lightblue;
