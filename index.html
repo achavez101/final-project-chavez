@@ -46,6 +46,7 @@
               <th>Author</th>
               <th>My Rating</th>
               <th>Chord Sheets</th>
+              <th>Spanish Chords</th>
               <th>Do You Like the Song?</th>
             </tr>
           </thead>
@@ -61,6 +62,10 @@
               </td>
               <td>
                 <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/1Fp2Z1xj5vCCoJ57bMtZwC65-l_F7wKZMRmTLDsA3gDw/edit?usp=sharing">Chords</button>
+              </td>
+              <td>
+                <button id="spanishChord" onclick ="spanishChords(this)" value="https://docs.google.com/document/d/1ygDCxhA21EyPA4jlLt6cP388DIprcoENNkFBQ0rUbBc/edit?usp=sharing">Spanish</button>
+                <p>Milagroso</p>
               </td>
               <td>
                 <button id="view-like1">Like</button>
@@ -80,6 +85,10 @@
                 <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/1OlpqVUuK51BXAYagRe2quklaMPi3olh4YqDRwuuoDRs/edit?usp=sharing">Chords</button>
               </td>
               <td>
+                <button id="spanishChord" onclick ="spanishChords(this)" value="https://docs.google.com/document/d/1QplYCoFFmbAro1ZMsrpQ9OSWcF1dL5U0nuShUKfW5yc/edit?usp=sharing">Spanish</button>
+                <p>Victoria</p>
+              </td>
+              <td>
                 <button id="view-like2">Like</button>
                 <p id="click-count2"></p>
               </td>
@@ -97,21 +106,29 @@
                 <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/10HpkABDQJh5IFvRV8povJS7cItvWPz_Q2FQ7d2Krv0w/edit?usp=sharing">Chords</button>
               </td>
               <td>
+                <button id="spanishChord" onclick ="spanishChords(this)" value="https://docs.google.com/document/d/1lOcdiujBd0gb4-VGWT6biaAhtKfBMyclpkxsP_u2JLI/edit?usp=sharing">Spanish</button>
+                <p>Que Se Abra El Cielo</p>
+              </td>
+              <td>
                 <button id="view-like3">Like</button>
                 <p id="click-count3"></p>
               </td>
             </tr>
-            <tr  class="song4">
+            <tr class="song4">
               <td>See a Victory</td>
               <td>Elevation Worship</td>
               <td>
                 <div class="stars-outer">
                   <div class="stars-inner"></div>
                 </div>
-                <span class="number-rating" id="numb"></span>
+                <span class="number-rating" id="num"></span>
               </td>
               <td>
                 <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/13BzAmQ1pNpz5Gk0pnDgGZVdbWqsJMRqcX_qzhOxQEhs/edit?usp=sharing">Chords</button>
+              </td>
+              <td>
+                <button id="spanishChord" onclick ="spanishChords(this)" value="https://docs.google.com/document/d/1UcsrWD7bbmCKs1daKF2h5XTV2vyJb_Vu6sXPgjJbbZc/edit?usp=sharing">Spanish</button>
+                <p>Ver La Victoria</p>
               </td>
               <td>
                 <button id="view-like4">Like</button>
@@ -131,6 +148,10 @@
                 <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/1J1KZPsw3buciV2wgWO3BTSIAwzShp6i4wdxZkEpyqQc/edit?usp=sharing">Chords</button>
               </td>
               <td>
+                <button id="spanishChord" onclick ="spanishChords(this)" value="https://docs.google.com/document/d/16MVm3tbT-giv7lkW536GOii9j07PvfpAG1Yl0YywzbQ/edit?usp=sharing">Spanish</button>
+                <p>Famoso Por</p>
+              </td>
+              <td>
                 <button id="view-like5">Like</button>
                 <p id="click-count5"></p>
               </td>
@@ -146,6 +167,10 @@
                 </td>
                 <td>
                   <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/1o8Xqc4lT34gDsZ0AmofeO5FUBJOnlDW7h9M3gXxcac4/edit?usp=sharing">Chords</button>
+                </td>
+                <td>
+                  <button id="spanishChord" onclick ="spanishChords(this)" value="https://docs.google.com/document/d/1gZZIR0SOd9YrC6kpBaGOQmf-LRyrS1zpcJuTkv6naTw/edit?usp=sharing">Spanish</button>
+                  <p>Glorioso Día</p>
                 </td>
                 <td>
                   <button id="view-like6">Like</button>
@@ -165,6 +190,10 @@
                   <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/1gD44LVEkI8_ihOm5s1QF1Y2wTNeMDSgiBCDNFZI3HgE/edit?usp=sharing">Chords</button>
                 </td>
                 <td>
+                  <button id="spanishChord" onclick ="spanishChords(this)" value="https://docs.google.com/document/d/1Gc1XAJsqqI1Upc0xlK8EWcgRxVoZY5mZCSeuuByFZaU/edit?usp=sharing">Spanish</button>
+                  <p>Canción del Trono</p>
+                </td>
+                <td>
                   <button id="view-like7">Like</button>
                   <p id="click-count7"></p>
                 </td>
@@ -182,6 +211,10 @@
                   <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/1t6zzatpxl4uWqcw47251H7wbQSRqo0g8aH9gL8bChxg/edit?usp=sharing">Chords</button>
                 </td>
                 <td>
+                  <button id="spanishChord" onclick ="spanishChords(this)" value="https://docs.google.com/document/d/1t6zzatpxl4uWqcw47251H7wbQSRqo0g8aH9gL8bChxg/edit?usp=sharing">Spanish</button>
+                  <p>Vivo Está</p>
+                </td>
+                <td>
                   <button id="view-like8">Like</button>
                   <p id="click-count8"></p>
                 </td>
@@ -197,6 +230,11 @@
                 </td>
                 <td>
                   <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/1Y-Uv6Lq33T52qy7lK5I-HckHdM2PSvNZsyYoud_bQ_A/edit?usp=sharing">Chords</button>
+
+                </td>
+                <td>
+                  <button id="spanishChord" onclick ="spanishChords(this)" value="https://docs.google.com/document/d/1M7qpMa2NZ-gvBMGjp4G7o8W4tGfaG98QvG97w504Cx8/edit?usp=sharing">Spanish</button>
+                  <p>Por Siempre</p>
                 </td>
                 <td>
                   <button id="view-like9">Like</button>
@@ -214,6 +252,10 @@
                 </td>
                 <td>
                   <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/1pi58zvl_DnRy8PTkTKqDZ-rNI-SQQk6QRIBl9QNKyc4/edit?usp=sharing">Chords</button>
+                </td>
+                <td>
+                  <button id="spanishChord" onclick ="spanishChords(this)" value="https://docs.google.com/document/d/1yulnR3F-dvQ60TPOral2Uvf-cTkE0w2OSCe4uGhQGIs/edit?usp=sharing">Spanish</button>
+                  <p>Lo Harás Otra Vez</p>
                 </td>
                 <td>
                   <button id="view-like10">Like</button>

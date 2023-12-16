@@ -23,8 +23,22 @@
   // Form Elements
   const productSelect = document.getElementById('product-select');
   const ratingControl = document.getElementById('rating-control');
+ 
 
-  // Init product
+  // Storing Rate Value in local storage
+  //inner html with key selection ideas
+  window.addEventListener('load', () => {
+    const rate1 = document.querySelector('#rating-control');
+    const rateUpdate1= localStorage.getItem('rateUpdate1')  || '';
+      rate1.value = rateUpdate1;
+      rate1.addEventListener('change', (e) => {
+        //setItem(keyName, keyValue)
+        localStorage.setItem('rateUpdate1', e.target.value);
+      })
+  })
+
+
+
   let product;
 
   // Product select change
@@ -131,8 +145,13 @@
           }
         }
     }
-    // Links
+    // English Chord Links
    function songChords(link) {
+    window.open(link.value);
+   }
+
+   // Spanish Chord Links
+   function spanishChords(link) {
     window.open(link.value);
    }
 
@@ -319,43 +338,8 @@
 
 
 
-     // can add an if else statement to help but right now, it's obstructing storage
 
-
-
-
-
-
-  //  var count = 0;
-  //  var button = document.getElementById("viewLike");
-  //  var result = document.getElementById("result");
-  //  button.onclick = function() {
-  //     count++;
-  //     result.innerHTML = count;
-  //  }
-
-
-  //  var count = 0;
-  //  var button = document.getElementById("viewLike");
-  //  var countDisplay = document.getElementById("count");
-  //  button.addEventListener("click", function() {
-  //   count++;
-  //   countDisplay.innerHTML = count;
-  //  });
-
-  // //  // Song 2
-  //  var count = 0;
-  //  var button = document.getElementById("song2");
-  //  var countDisplay = document.getElementById("count2");
-  //  button.addEventListener("click", function() {
-  //   count++;
-  //   countDisplay.innerHTML = count;
-  //  });
-
-
-    // save to local storage
-    
-    
+    // Local Storage for rating
 
 
     // Rating Sort
