@@ -1,18 +1,16 @@
-
-
-    // Initial Ratings
-    const ratings = {
-    song1: 1.0,
-    song2: 1.0,
-    song3: 1.0,
-    song4: 1.0,
-    song5: 1.0,
-    song6: 1.0,
-    song7: 1.0,
-    song8: 1.0,
-    song9: 1.0, 
-    song10: 1.0
-    }
+  // Default Ratings
+  const ratings = {
+  song1: 1.0,
+  song2: 1.0,
+  song3: 1.0,
+  song4: 1.0,
+  song5: 1.0,
+  song6: 1.0,
+  song7: 1.0,
+  song8: 1.0,
+  song9: 1.0, 
+  song10: 1.0
+  }
 
   // Total Stars
   const starsTotal = 5;
@@ -21,32 +19,17 @@
   document.addEventListener('DOMContentLoaded', getRatings);
 
   // Form Elements
-  const productSelect = document.getElementById('product-select');
+  const songSelect = document.getElementById('song-select');
   const ratingControl = document.getElementById('rating-control');
- 
 
-  // Storing Rate Value in local storage
-  //inner html with key selection ideas
-  window.addEventListener('load', () => {
-    const rate1 = document.querySelector('#rating-control');
-    const rateUpdate1= localStorage.getItem('rateUpdate1')  || '';
-      rate1.value = rateUpdate1;
-      rate1.addEventListener('change', (e) => {
-        //setItem(keyName, keyValue)
-        localStorage.setItem('rateUpdate1', e.target.value);
-      })
-  })
+  let song;
 
-
-
-  let product;
-
-  // Product select change
-  productSelect.addEventListener('change', (e) => {
-    product = e.target.value;
-    // Enable rating control
+  // Song select change
+  songSelect.addEventListener('change', (e) => {
+    song = e.target.value;
+    // Enable rating control input
     ratingControl.disabled = false;
-    ratingControl.value = ratings[product];
+    ratingControl.value = ratings[song];
   });
 
   // Rating control change
@@ -58,12 +41,30 @@
       alert('Please rate 1 - 5');
       return;
     }
-
     // Change rating
-    ratings[product] = rating;
+    ratings[song] = rating;
 
     getRatings();
+
   });
+
+
+  // save ratings
+  function save() {
+    // targeting the value that is entered by the user
+    var new_rate = document.getElementById('rating-control').value;
+    // if local storage is empty, add a new value with array
+    if(localStorage.getItem('rate') == null){
+      localStorage.setItem('rate', '[]');
+    }
+    // obtain old data and add new data
+    var old_rate = JSON.parse(localStorage.getItem('rate'));
+    // push new data on to the old data
+    old_rate.push(new_rate);
+
+    // save both datas to local storage
+    localStorage.setItem('rate', JSON.stringify(old_rate));
+  }
 
   // Get ratings
   function getRatings() {
@@ -161,8 +162,8 @@
    let button = document.getElementById("view-like1");
       let clickCount1 = 0;
       let display1 = document.getElementById("click-count1");
-      if (localStorage.getItem("clickCount1")) {
-         clickCount1 = parseInt(localStorage.getItem("clickCount1"));
+      if (localStorage.getItem("Way Maker")) {
+         clickCount1 = parseInt(localStorage.getItem("Way Maker"));
       }
       button.addEventListener("click", function() {
          clickCount1++;
@@ -171,7 +172,7 @@
         }else {
           display1.innerHTML = clickCount1 + " likes";
         }
-         localStorage.setItem("clickCount1", clickCount1);
+         localStorage.setItem("Way Maker", clickCount1);
       });
 
   // Song 2 Like
@@ -179,8 +180,8 @@
   let button2 = document.getElementById("view-like2");
       let clickCount2 = 0;
       let display2 = document.getElementById("click-count2");
-      if (localStorage.getItem("clickCount2")) {
-        clickCount2 = parseInt(localStorage.getItem("clickCount2"));
+      if (localStorage.getItem("Breakthrough")) {
+        clickCount2 = parseInt(localStorage.getItem("Breakthrough"));
      }
      button2.addEventListener("click", function() {
         clickCount2++;
@@ -189,7 +190,7 @@
         }else {
           display2.innerHTML = clickCount2 + " likes";
         }
-        localStorage.setItem("clickCount2", clickCount2);
+        localStorage.setItem("Breakthrough", clickCount2);
      });
 
      // Song 3 Like
@@ -197,8 +198,8 @@
      let button3 = document.getElementById("view-like3");
       let clickCount3 = 0;
       let display3 = document.getElementById("click-count3");
-      if (localStorage.getItem("clickCount3")) {
-        clickCount3 = parseInt(localStorage.getItem("clickCount3"));
+      if (localStorage.getItem("Let The Heavens Open")) {
+        clickCount3 = parseInt(localStorage.getItem("Let The Heavens Open"));
      }
      button3.addEventListener("click", function() {
       clickCount3++;
@@ -207,7 +208,7 @@
       }else {
         display3.innerHTML = clickCount3 + " likes";
       }
-      localStorage.setItem("clickCount3", clickCount3);
+      localStorage.setItem("Let The Heavens Open", clickCount3);
      });
 
      // Song 4 Like
@@ -215,8 +216,8 @@
      let button4 = document.getElementById("view-like4");
       let clickCount4 = 0;
       let display4 = document.getElementById("click-count4");
-      if (localStorage.getItem("clickCount4")) {
-        clickCount4 = parseInt(localStorage.getItem("clickCount4"));
+      if (localStorage.getItem("See A Victory")) {
+        clickCount4 = parseInt(localStorage.getItem("See A Victory"));
      }
      button4.addEventListener("click", function() {
         clickCount4++;
@@ -225,7 +226,7 @@
         }else {
           display4.innerHTML = clickCount4 + " likes";
         }
-        localStorage.setItem("clickCount4", clickCount4);
+        localStorage.setItem("See A Victory", clickCount4);
      });
 
      //Song 5 Like
@@ -233,8 +234,8 @@
      let button5 = document.getElementById("view-like5");
      let clickCount5 = 0;
      let display5 = document.getElementById("click-count5");
-     if (localStorage.getItem("clickCount5")) {
-       clickCount5 = parseInt(localStorage.getItem("clickCount5"));
+     if (localStorage.getItem("Famous For")) {
+       clickCount5 = parseInt(localStorage.getItem("Famous For"));
     }
     button5.addEventListener("click", function() {
        clickCount5++;
@@ -243,7 +244,7 @@
        }else {
          display5.innerHTML = clickCount5 + " likes";
        }
-       localStorage.setItem("clickCount5", clickCount5);
+       localStorage.setItem("Famous For", clickCount5);
     });
 
      //Song 6 Like
@@ -251,8 +252,8 @@
      let button6 = document.getElementById("view-like6");
      let clickCount6 = 0;
      let display6 = document.getElementById("click-count6");
-     if (localStorage.getItem("clickCount6")) {
-       clickCount6 = parseInt(localStorage.getItem("clickCount6"));
+     if (localStorage.getItem("Glorious Day")) {
+       clickCount6 = parseInt(localStorage.getItem("Glorious Day"));
     }
     button6.addEventListener("click", function() {
        clickCount6++;
@@ -261,7 +262,7 @@
        }else {
          display6.innerHTML = clickCount6 + " likes";
        }
-       localStorage.setItem("clickCount6", clickCount6);
+       localStorage.setItem("Glorious Day", clickCount6);
     });
 
     //Song 7 Like
@@ -269,8 +270,8 @@
     let button7 = document.getElementById("view-like7");
     let clickCount7 = 0;
     let display7 = document.getElementById("click-count7");
-    if (localStorage.getItem("clickCount7")) {
-      clickCount7 = parseInt(localStorage.getItem("clickCount7"));
+    if (localStorage.getItem("Throne Room")) {
+      clickCount7 = parseInt(localStorage.getItem("Throne Room"));
    }
    button7.addEventListener("click", function() {
       clickCount7++;
@@ -279,7 +280,7 @@
       }else {
         display7.innerHTML = clickCount7 + " likes";
       }
-      localStorage.setItem("clickCount7", clickCount7);
+      localStorage.setItem("Throne Room", clickCount7);
    });
 
       //Song 8 Like
@@ -287,8 +288,8 @@
       let button8 = document.getElementById("view-like8");
       let clickCount8 = 0;
       let display8 = document.getElementById("click-count8");
-      if (localStorage.getItem("clickCount8")) {
-        clickCount8 = parseInt(localStorage.getItem("clickCount8"));
+      if (localStorage.getItem("He's Alive")) {
+        clickCount8 = parseInt(localStorage.getItem("He's Alive"));
      }
      button8.addEventListener("click", function() {
         clickCount8++;
@@ -297,7 +298,7 @@
         }else {
           display8.innerHTML = clickCount8 + " likes";
         }
-        localStorage.setItem("clickCount8", clickCount8);
+        localStorage.setItem("He's Alive", clickCount8);
      });
 
       //Song 9 Like
@@ -305,8 +306,8 @@
       let button9 = document.getElementById("view-like9");
       let clickCount9 = 0;
       let display9 = document.getElementById("click-count9");
-      if (localStorage.getItem("clickCount9")) {
-        clickCount9 = parseInt(localStorage.getItem("clickCount9"));
+      if (localStorage.getItem("Ever Be")) {
+        clickCount9 = parseInt(localStorage.getItem("Ever Be"));
     }
     button9.addEventListener("click", function() {
         clickCount9++;
@@ -315,7 +316,7 @@
         }else {
           display9.innerHTML = clickCount9 + " likes";
         }
-        localStorage.setItem("clickCount9", clickCount9);
+        localStorage.setItem("Ever Be", clickCount9);
     });
 
       //Song 10 Like
@@ -323,8 +324,8 @@
       let button10 = document.getElementById("view-like10");
       let clickCount10 = 0;
       let display10 = document.getElementById("click-count10");
-      if (localStorage.getItem("clickCount10")) {
-        clickCount10 = parseInt(localStorage.getItem("clickCount10"));
+      if (localStorage.getItem("Do It Again")) {
+        clickCount10 = parseInt(localStorage.getItem("Do It Again"));
     }
     button10.addEventListener("click", function() {
         clickCount10++;
@@ -333,25 +334,156 @@
         }else {
           display10.innerHTML = clickCount10 + " likes";
         }
-        localStorage.setItem("clickCount10", clickCount10);
+        localStorage.setItem("Do It Again", clickCount10);
     });
 
+  // Audio Section
+  let audio1 = document.getElementById("play1").children[0];
+  let isPlaying1 = false;
+  audio1.pause();
+
+  function songPlay1() {
+    if (isPlaying1) {
+      audio1.pause();
+    } else {
+      audio1.play();
+    }
+    isPlaying1 = !isPlaying1;
+  }  
+
+
+  let audio2 = document.getElementById("play2").children[0];
+  let isPlaying2 = false;
+  audio2.pause();
+
+  function songPlay2() {
+    if (isPlaying2) {
+      audio2.pause();
+    } else {
+      audio2.play();
+    }
+    isPlaying2 = !isPlaying2;
+  }  
+
+
+  let audio3 = document.getElementById("play3").children[0];
+  let isPlaying3 = false;
+  audio3.pause();
+
+  function songPlay3() {
+    if (isPlaying3) {
+      audio3.pause();
+    } else {
+      audio3.play();
+    }
+    isPlaying3 = !isPlaying3;
+  }  
+
+
+  let audio4 = document.getElementById("play4").children[0];
+  let isPlaying4 = false;
+  audio4.pause();
+
+  function songPlay4() {
+    if (isPlaying4) {
+      audio4.pause();
+    } else {
+      audio4.play();
+    }
+    isPlaying4 = !isPlaying4;
+  }  
+
+  let audio5 = document.getElementById("play5").children[0];
+  let isPlaying5 = false;
+  audio5.pause();
+
+  function songPlay5() {
+    if (isPlaying5) {
+      audio5.pause();
+    } else {
+      audio5.play();
+    }
+    isPlaying5 = !isPlaying5;
+  }  
+
+  let audio6 = document.getElementById("play6").children[0];
+  let isPlaying6 = false;
+  audio6.pause();
+
+  function songPlay6() {
+    if (isPlaying6) {
+      audio6.pause();
+    } else {
+      audio6.play();
+    }
+    isPlaying6 = !isPlaying6;
+  }  
+
+  let audio7 = document.getElementById("play7").children[0];
+  let isPlaying7 = false;
+  audio7.pause();
+
+  function songPlay7() {
+    if (isPlaying7) {
+      audio7.pause();
+    } else {
+      audio7.play();
+    }
+    isPlaying7 = !isPlaying7;
+  }  
+
+  let audio8 = document.getElementById("play8").children[0];
+  let isPlaying8 = false;
+  audio8.pause();
+
+  function songPlay8() {
+    if (isPlaying8) {
+      audio8.pause();
+    } else {
+      audio8.play();
+    }
+    isPlaying8 = !isPlaying8;
+  }  
+
+  let audio9 = document.getElementById("play9").children[0];
+  let isPlaying9 = false;
+  audio9.pause();
+
+  function songPlay9() {
+    if (isPlaying9) {
+      audio9.pause();
+    } else {
+      audio9.play();
+    }
+    isPlaying9 = !isPlaying9;
+  }  
+
+
+  let audio10 = document.getElementById("play10").children[0];
+  let isPlaying10 = false;
+  audio10.pause();
+
+  function songPlay10() {
+    if (isPlaying10) {
+      audio10.pause();
+    } else {
+      audio10.play();
+    }
+    isPlaying10 = !isPlaying10;
+  }  
 
 
 
-    // Local Storage for rating
 
 
-    // Rating Sort
-    // function ratingSort() {
-    //         // Initial Ratings
-    //     ratings.sort(function(a,b) {return a-b});
-    //     var x = document.getElementById("num");
-    //     x.innerHTML = ratings.sort();
-
-    // }
+  // function pauseSong9() {
+  //     let music = new Audio('Ever Be - Rec.m4a');
+  //     music.pause();
+  // }
 
 
+
+// Future OOP
 
 // const items = [
 //   { song: "Way Maker", author: "Sinach" },
@@ -366,35 +498,3 @@
 //   { song: "Do It Again", author: "Elevation Worship"},
 // ];
 
-
-
-//document.querySelectorAll(".items").forEach(a=>a.style.display = "initial");
-
-
-// document.getElementsByTagName('td')[0] = items.song[0];
-// document.getElementsByTagName("TD")[1] = items.author[0];
-//console.log(document.getElementsByTagName("TD")[0] = items.song[0]);
-
-// function getItems() {
-//   document.querySelector(`.${items} .items`).innerHTML = items.song[0];
-// }
-
-
-
-// // sort by value
-// items.sort((a, b) => a.value - b.value);
-
-// // sort by name
-// items.sort((a, b) => {
-//   const nameA = a.name.toUpperCase(); // ignore upper and lowercase
-//   const nameB = b.name.toUpperCase(); // ignore upper and lowercase
-//   if (nameA < nameB) {
-//     return -1;
-//   }
-//   if (nameA > nameB) {
-//     return 1;
-//   }
-
-//   // names must be equal
-//   return 0;
-// });
