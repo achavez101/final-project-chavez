@@ -1,27 +1,23 @@
 body {
-    background-color: antiquewhite;
+  background-color: #caf0f8;
 }
 #welcome {
   display: flex;
   justify-content: center;
-  color: violet;
+  color: #03045e;
 }
 #chord, #spanishChord{
-  background-color: antiquewhite;
+  background-color: #03d4fe;
 }
 #view-like1, #view-like2, #view-like3, #view-like4, #view-like5, #view-like6, #view-like7, #view-like8, #view-like9, #view-like10{
-  background-color: antiquewhite;
+  background-color: #03d4fe;
 }
 #play1, #play2, #play3, #play4, #play5, #play6, #play7, #play8, #play9, #play10 {
-  background-color: blueviolet;
-  color:white;
-}
-#count {
-  margin-top: 5px;
-  padding-left: 15px;
+  background-color: #03d4fe;
 }
 #songSort, #authorSort,  #save{
-    background-color:violet;
+  background-color:#03045e;
+  color:white;
 }
 .stars-outer {
     position: relative;
