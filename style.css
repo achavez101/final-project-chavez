@@ -6,18 +6,30 @@ body {
   justify-content: center;
   color: #03045e;
 }
-#chord, #spanishChord{
+#chord, #spanishChord {
   background-color: #03d4fe;
+}
+#chord:hover, #spanishChord:hover {
+  background-color: #caf0f8;
 }
 #view-like1, #view-like2, #view-like3, #view-like4, #view-like5, #view-like6, #view-like7, #view-like8, #view-like9, #view-like10{
   background-color: #03d4fe;
 }
+#view-like1:hover, #view-like2:hover, #view-like3:hover, #view-like4:hover, #view-like5:hover, #view-like6:hover, #view-like7:hover, #view-like8:hover, #view-like9:hover, #view-like10:hover{
+  background-color: #caf0f8;
+}
 #play1, #play2, #play3, #play4, #play5, #play6, #play7, #play8, #play9, #play10 {
   background-color: #03d4fe;
 }
-#songSort, #authorSort,  #save{
+#play1:hover, #play2:hover, #play3:hover, #play4:hover, #play5:hover, #play6:hover, #play7:hover, #play8:hover, #play9:hover, #play10:hover {
+  background-color: #caf0f8;
+}
+#songSort, #authorSort, #save{
   background-color:#03045e;
   color:white;
+}
+#songSort:hover, #authorSort:hover, #save:hover {
+  background-color: #4a4cbf;
 }
 .stars-outer {
     position: relative;
