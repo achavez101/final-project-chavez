@@ -78,6 +78,8 @@
       // Set width of stars-inner to percentage
       document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded;
 
+      // document.querySelector(`${rating-control} #number-rating`).style.width = starPercentageRounded;
+
       // Add number rating
       document.querySelector(`.${rating} .number-rating`).innerHTML = ratings[rating];
     }
@@ -473,9 +475,6 @@
   }  
 
 
-
-
-
   // function pauseSong9() {
   //     let music = new Audio('Ever Be - Rec.m4a');
   //     music.pause();
@@ -485,16 +484,101 @@
 
 // Future OOP
 
-// const items = [
-//   { song: "Way Maker", author: "Sinach" },
-//   { song: "Breakthrough", author: "Eddie James" },
-//   { song: "Let the Heavens Open", author: "Christina D'Clario"},
-//   { song: "See a Victory", author: "Elevation Worship"},
-//   { song: "Famous For", author: "Tauren Wells"},
-//   { song: "Glorious Day", author: "Kristian Stanfill"},
-//   { song: "Throne Room", author: "Charity Gayle"},
-//   { song: "He's Alive", author: "Eddie James"},
-//   { song: "Ever Be", author: "Aaron Shust"},
-//   { song: "Do It Again", author: "Elevation Worship"},
-// ];
+let list = [
+  { song: "Way Maker", author: "Sinach", ratings:[] },
+  { song: "Breakthrough", author: "Eddie James", ratings:[] },
+  { song: "Let the Heavens Open", author: "Christina D'Clario", ratings: []},
+  { song: "See a Victory", author: "Elevation Worship", ratings:[]},
+  { song: "Famous For", author: "Tauren Wells", ratings:[]},
+  { song: "Glorious Day", author: "Kristian Stanfill", ratings:[]},
+  { song: "Throne Room", author: "Charity Gayle", ratings:[]},
+  { song: "He's Alive", author: "Eddie James", ratings:[]},
+  { song: "Ever Be", author: "Aaron Shust", ratings:[]},
+  { song: "Do It Again", author: "Elevation Worship", ratings:[]},
+];
 
+document.addEventListener("DOMContentLoaded", (event) => {var table = document.getElementById("myTable");
+  list.map( (e) => {
+  var row = document.createElement('tr');
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+  var cell7 = row.insertCell(6);
+
+  cell1.innerHTML = e.song;
+  cell2.innerHTML = e.author;
+  cell3.innerHTML = e.ratings;
+  // i would like to be able to pull from my html page for this
+  cell4.innerHTML = document.getElementById('chord');
+  // i would like to be able to pull from my html page for this
+  cell5.innerHTML = document.getElementById('spanishChord');
+  // i would like to be able to pull from my html page for this
+  // complication, have several buttons with different ids
+  cell6.innerHTML = document.getElementById('view-like1');
+  // i would like to be able to pull from my html page for this
+  // complication, have several buttons with different ids
+  cell7.innerHTML = document.getElementById('play1');
+
+  // cell4.innerHTML = e.innerHTML('chord');
+
+  console.log(document.querySelectorAll('chord'));
+
+
+  // document.getElementById("list").innerHTML = list[0].song;
+  // document.getElementById("list").innerHTML = list[0].author;
+  // document.getElementById("author").innerHTML = list[0].author[0];
+  // document.getElementById("list").innerHTML = list[1].song[1];
+  // document.getElementById("author").innerHTML = list[1].author[1];
+  // document.getElementById("list").innerHTML = list[2].song[1];
+  // document.getElementById("author").innerHTML = list[2].author;
+  // document.getElementById("list").innerHTML = list[3].song;
+  // document.getElementById("author").innerHTML = list[3].author;
+  // document.getElementById("author").innerHTML = list[""];
+  // cell3.innerHTML = e.ratings;
+  // cell3.innerHTML = e.ratings;
+  // cell4.innerHTML = e.link;
+  // document.getElementById("list").innerHTML = list["song"];
+
+
+  // document.getElementById("chord").innerHTML = "Chord";
+  // document.getElementById("spanishChord").innerHTML = "Spanish";
+  table.appendChild(row);
+  })})
+
+// function myFunction() {
+//   var table = document.getElementById("myTable");
+//   list.map( (e) => {
+//   var row = document.createElement('tr');
+//   var cell1 = row.insertCell(0);
+//   var cell2 = row.insertCell(1);
+//   var cell3 = row.insertCell(2);
+//   var cell4 = row.insertCell(3);
+  
+//   cell1.innerHTML = e.song;
+//   cell2.innerHTML = e.author;
+//   cell3.innerHTML = e.ratings;
+//   table.appendChild(row);
+//   })
+
+// }
+
+
+// <tr id="0">
+// <td>items[0].song</td>
+// <td>items[0].author</td>
+// <td>items[0].ratings.reduce()</td>
+// </tr>
+
+
+// how do I make it work and fit into my table?
+// how do I target those values in that way?
+
+// parse it
+// list[0].rating
+// can set average rating 
+// can map through to get average of an array
+
+// turn class into id

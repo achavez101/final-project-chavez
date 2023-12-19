@@ -42,7 +42,7 @@
             <button id="authorSort" onclick="authorSort()">Alphabetical Author Sorting (A-Z)</button>
             <!-- <button id="ratingSort" onclick="ratingSort()">Alphabetical Rating Sorting (1-5)</button> -->
         </div>
-        <table class="table table-striped" id="sortTable">
+        <table id="myTable" class="table table-striped" id="sortTable">
           <thead>
             <tr>
               <th class="songList">Song Name</th>
@@ -55,9 +55,10 @@
             </tr>
           </thead>
           <tbody>
+           
             <tr class="song1">
-              <td>Way maker</td>
-              <td>Sinach</td>
+              <!-- <td id="list"></td>
+              <td id="author"></td> -->
               <td>
                 <div class="stars-outer">
                   <div class="stars-inner"></div>
@@ -65,10 +66,10 @@
                 <span class="number-rating" id="num"></span>
               </td>
               <td>
-                <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/1Fp2Z1xj5vCCoJ57bMtZwC65-l_F7wKZMRmTLDsA3gDw/edit?usp=sharing">Chords</button>
+                <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/1Fp2Z1xj5vCCoJ57bMtZwC65-l_F7wKZMRmTLDsA3gDw/edit?usp=sharing">Chord</button>
               </td>
               <td>
-                <button id="spanishChord" onclick ="spanishChords(this)" value="https://docs.google.com/document/d/1ygDCxhA21EyPA4jlLt6cP388DIprcoENNkFBQ0rUbBc/edit?usp=sharing">Spanish</button>
+                <button id="spanishChord" onclick ="spanishChords(this)" value="https://docs.google.com/document/d/1ygDCxhA21EyPA4jlLt6cP388DIprcoENNkFBQ0rUbBc/edit?usp=sharing"></button>
                 <p>Milagroso</p>
               </td>
               <td>
@@ -87,8 +88,8 @@
               </td> -->
             </tr>
             <tr class="song2" >
-              <td class="items">Breakthrough</td>
-              <td>Eddie James</td>
+              <!-- <td id="list"></td>
+              <td id="author"></td> -->
               <td>
                 <div class="stars-outer">
                   <div class="stars-inner"></div>
@@ -115,8 +116,8 @@
             </td>
             </tr>
             <tr class="song3"  >
-              <td>Let the Heavens Open</td>
-              <td>Christina D'Clario</td>
+              <!-- <td id="list"></td>
+              <td id="author"></td> -->
               <td>
                 <div class="stars-outer">
                   <div class="stars-inner"></div>
@@ -142,8 +143,8 @@
               </td>
             </tr>
             <tr class="song4">
-              <td>See a Victory</td>
-              <td>Elevation Worship</td>
+              <!-- <td>See a Victory</td>
+              <td>Elevation Worship</td> -->
               <td>
                 <div class="stars-outer">
                   <div class="stars-inner"></div>
@@ -169,8 +170,8 @@
               </td>
             </tr>
             <tr class="song5" >
-              <td>Famous For</td>
-              <td>Tauren Wells</td>
+              <!-- <td>Famous For</td>
+              <td>Tauren Wells</td> -->
               <td>
                 <div class="stars-outer">
                   <div class="stars-inner">
@@ -197,8 +198,8 @@
               </td>
             </tr>
             <tr class="song6">
-                <td>Glorious Day</td>
-                <td>Kristian Stanfill</td>
+                <!-- <td>Glorious Day</td>
+                <td>Kristian Stanfill</td>-->
                 <td>
                   <div class="stars-outer">
                     <div class="stars-inner"></div>
@@ -224,8 +225,8 @@
                 </td>
             </tr>
             <tr class="song7" ">
-                <td>Throne Room</td>
-                <td>Charity Gayle</td>
+                <!-- <td>Throne Room</td>
+                <td>Charity Gayle</td> -->
                 <td>
                   <div class="stars-outer">
                     <div class="stars-inner"></div>
@@ -233,7 +234,7 @@
                   <span class="number-rating" id="num"></span>
                 </td>
                 <td>
-                  <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/1gD44LVEkI8_ihOm5s1QF1Y2wTNeMDSgiBCDNFZI3HgE/edit?usp=sharing">Chords</button>
+                  <button id="chord" onclick = "songChords(this)" value="https://docs.google.com/document/d/1gD44LVEkI8_ihOm5s1QF1Y2wTNeMDSgiBCDNFZI3HgE/edit?usp=sharing"></button>
                 </td>
                 <td>
                   <button id="spanishChord" onclick ="spanishChords(this)" value="https://docs.google.com/document/d/1Gc1XAJsqqI1Upc0xlK8EWcgRxVoZY5mZCSeuuByFZaU/edit?usp=sharing">Spanish</button>
@@ -251,8 +252,8 @@
                 </td>
             </tr>
             <tr class="song8" >
-                <td>He's Alive</td>
-                <td>Eddie James</td>
+                <!-- <td>He's Alive</td>
+                <td>Eddie James</td> -->
                 <td>
                   <div class="stars-outer">
                     <div class="stars-inner"></div>
@@ -278,8 +279,8 @@
                 </td>
             </tr>
             <tr class="song9" >
-                <td>Ever Be</td>
-                <td>Aaron Shust</td>
+                <!-- <td>Ever Be</td>
+                <td>Aaron Shust</td> -->
                 <td>
                   <div class="stars-outer">
                     <div class="stars-inner"></div>
@@ -307,8 +308,8 @@
                 </td>
             </tr>
             <tr class="song10">
-                <td>Do It Again</td>
-                <td>Elevation Worship</td>
+                <!-- <td>Do It Again</td>
+                <td>Elevation Worship</td> -->
                 <td>
                   <div class="stars-outer">
                     <div class="stars-inner"></div>
