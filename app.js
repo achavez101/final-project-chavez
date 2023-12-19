@@ -485,8 +485,8 @@
 // Future OOP
 
 let list = [
-  { song: "Way Maker", author: "Sinach", ratings:[] },
-  { song: "Breakthrough", author: "Eddie James", ratings:[] },
+  { song: "Way Maker", author: "Sinach", ratings:[], chord: "https://docs.google.com/document/d/1Fp2Z1xj5vCCoJ57bMtZwC65-l_F7wKZMRmTLDsA3gDw/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1ygDCxhA21EyPA4jlLt6cP388DIprcoENNkFBQ0rUbBc/edit?usp=sharing", likes: 0, play: "./Song Clips/Way Maker.m4a"},
+  { song: "Breakthrough", author: "Eddie James", ratings:[]},
   { song: "Let the Heavens Open", author: "Christina D'Clario", ratings: []},
   { song: "See a Victory", author: "Elevation Worship", ratings:[]},
   { song: "Famous For", author: "Tauren Wells", ratings:[]},
@@ -511,8 +511,10 @@ document.addEventListener("DOMContentLoaded", (event) => {var table = document.g
   cell1.innerHTML = e.song;
   cell2.innerHTML = e.author;
   cell3.innerHTML = e.ratings;
+  cell4.innerHTML = '<button id="chord" onclick = "songChords(this)" value = e.chord>Chord</button>';
+  console.log(e.chord);
   // i would like to be able to pull from my html page for this
-  cell4.innerHTML = document.getElementById('chord');
+  // cell4.innerHTML = document.getElementById('chord');
   // i would like to be able to pull from my html page for this
   cell5.innerHTML = document.getElementById('spanishChord');
   // i would like to be able to pull from my html page for this
@@ -524,7 +526,7 @@ document.addEventListener("DOMContentLoaded", (event) => {var table = document.g
 
   // cell4.innerHTML = e.innerHTML('chord');
 
-  console.log(document.querySelectorAll('chord'));
+  // console.log(document.querySelectorAll('chord'));
 
 
   // document.getElementById("list").innerHTML = list[0].song;
