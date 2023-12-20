@@ -1,4 +1,76 @@
-  // Default Ratings
+// Future OOP
+
+let list = [
+  { song: "Way Maker", author: "Sinach", ratings:[], chord: "https://docs.google.com/document/d/1Fp2Z1xj5vCCoJ57bMtZwC65-l_F7wKZMRmTLDsA3gDw/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1ygDCxhA21EyPA4jlLt6cP388DIprcoENNkFBQ0rUbBc/edit?usp=sharing", likes: "1", play: "./Song Clips/Way Maker.m4a"},
+  { song: "Breakthrough", author: "Eddie James", ratings:[], chord: "https://docs.google.com/document/d/1OlpqVUuK51BXAYagRe2quklaMPi3olh4YqDRwuuoDRs/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1QplYCoFFmbAro1ZMsrpQ9OSWcF1dL5U0nuShUKfW5yc/edit?usp=sharing", likes: "2", play:"./Song Clips/Breakthrough.m4a"},
+  { song: "Let the Heavens Open", author: "Christina D'Clario", ratings: [], chord: "", spanishChord: "", likes: "3", play: ""},
+  { song: "See a Victory", author: "Elevation Worship", ratings:[], chord: "", spanishChord: "", likes: "4", play: ""},
+  { song: "Famous For", author: "Tauren Wells", ratings:[], chord: "", spanishChord: "", likes: "5", play: ""},
+  { song: "Glorious Day", author: "Kristian Stanfill", ratings:[], chord: "", spanishChord: "", likes: "6", play: ""},
+  { song: "Throne Room", author: "Charity Gayle", ratings:[], chord: "", spanishChord: "", likes: "7", play: ""},
+  { song: "He's Alive", author: "Eddie James", ratings:[], chord: "", spanishChord: "", likes: "8", play: ""},
+  { song: "Ever Be", author: "Aaron Shust", ratings:[], chord: "", spanishChord: "", likes: "9", play: ""},
+  { song: "Do It Again", author: "Elevation Worship", ratings:[], chord: "", spanishChord: "", likes: "10", play: ""},
+];
+
+document.addEventListener("DOMContentLoaded", (event) => {var table = document.getElementById("myTable");
+  list.map( (e) => {
+  var row = document.createElement('tr');
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+  var cell7 = row.insertCell(6);
+
+  cell1.innerHTML = e.song;
+  cell2.innerHTML = e.author;
+  cell3.innerHTML = e.ratings;
+  cell4.innerHTML = '<button id= "chord" onclick = "songChords(this)"value ='+e.chord+'>Chord</button>';
+  cell5.innerHTML = '<button id= "spanishChord" onclick = "spanishChords(this)" value = '+e.spanishChord+'>Spanish</button>';
+  cell6.innerHTML = '<button id= "likes" onclick = "songLikes(this)" value = '+e.likes+'> <i class ="fa fa-thumbs-up"></i></button>';
+  cell7.innerHTML = '<button id= "play" onclick = "musicClip()" value = '+e.play+'>Clip</button>';
+  table.appendChild(row);
+  })})
+
+
+  // English Chord Links
+  function songChords(link) {
+    window.open(link.value);
+    }
+
+    // Spanish Chord Links
+    function spanishChords(link) {
+    window.open(link.value);
+    }
+
+
+    // JavaScript Like button
+    var state = true;
+
+    function songLikes(element){
+        if(state){
+            var currentElement = element.querySelector('.fa-thumbs-up');
+            currentElement.style.color = "green";
+            JSON.parse(localStorage.setItem("likes", JSON.stringify(list.song)));
+    
+        }else{
+            var currentElement = element.querySelector('.fa-thumbs-up');
+            currentElement.style.color = "red";
+            JSON.parse(localStorage.setItem("unlike", JSON.stringify(list.song)));
+        }
+        state = !state;
+    }
+    
+    window.addEventListener('DOMContentLoaded', e => {
+        currentElement.style.color = localStorage.getItem("likes", JSON.stringify(list.song));
+    });
+
+
+
+
+// Default Ratings
   // const ratings = {
   // song1: 1.0,
   // song2: 1.0,
@@ -148,15 +220,7 @@
     //       }
     //     }
     // }
-    // English Chord Links
-   function songChords(link) {
-    window.open(link.value);
-   }
-
-   // Spanish Chord Links
-   function spanishChords(link) {
-    window.open(link.value);
-   }
+  
 
   //  // Likes
   //  // Song 1 Like
@@ -341,43 +405,53 @@
 
 
 
-  // JavaScript Like button
-  const like = document.querySelectorAll('likes');
-  let count = 0;
-
-  function songLikes() {
-    like.forEach((count) => {
-      count.addEventListener('click', () => {
-        if(localStorage.getItem('likes') == null){
-          localStorage.setItem('likes', '[]');
-          count++;
-        }
-        if (localStorage.getItem('likes')) {
-          count = parseInt(localStorage.getItem('likes'));
-       }
-
-      })
-    })
-  }
 
 
-  const ratingElements = document.querySelectorAll('div.rating')
 
-ratingElements.forEach(ratingElement => {
-    const countUpButton = ratingElement.querySelector('button.countUp')
-    // const countDownButton = ratingElement.querySelector('button.countDown')
-    const counterDisplayElement = ratingElement.querySelector('count')
+    // function songLikes(x) {
+    //   x.classList.toggle("fa-thumbs-down")
+    // }
 
-    countUpButton.addEventListener('click', function() {
-        const currentCount = Number(counterDisplayElement.innerHTML);
-        counterDisplayElement.innerHTML = String(currentCount + 1);
-    })
 
-    // countDownButton.addEventListener('click', function() {
-    //     const currentCount = Number(counterDisplayElement.innerHTML);
-    //     counterDisplayElement.innerHTML = String(currentCount - 1);
-    // })
-})
+  
+
+
+//   const like = document.querySelectorAll('likes');
+//   let count = 0;
+
+//   function songLikes() {
+//     like.forEach((count) => {
+//       count.addEventListener('click', () => {
+//         if(localStorage.getItem('likes') == null){
+//           localStorage.setItem('likes', '[]');
+//           count++;
+//         }
+//         if (localStorage.getItem('likes')) {
+//           count = parseInt(localStorage.getItem('likes'));
+//        }
+
+//       })
+//     })
+//   }
+
+
+//   const ratingElements = document.querySelectorAll('div.rating')
+
+// ratingElements.forEach(ratingElement => {
+//     const countUpButton = ratingElement.querySelector('button.countUp')
+//     // const countDownButton = ratingElement.querySelector('button.countDown')
+//     const counterDisplayElement = ratingElement.querySelector('count')
+
+//     countUpButton.addEventListener('click', function() {
+//         const currentCount = Number(counterDisplayElement.innerHTML);
+//         counterDisplayElement.innerHTML = String(currentCount + 1);
+//     })
+
+//     // countDownButton.addEventListener('click', function() {
+//     //     const currentCount = Number(counterDisplayElement.innerHTML);
+//     //     counterDisplayElement.innerHTML = String(currentCount - 1);
+//     // })
+// })
 
 
 
@@ -523,42 +597,6 @@ ratingElements.forEach(ratingElement => {
   // }
 
 
-
-// Future OOP
-
-let list = [
-  { song: "Way Maker", author: "Sinach", ratings:[], chord: "https://docs.google.com/document/d/1Fp2Z1xj5vCCoJ57bMtZwC65-l_F7wKZMRmTLDsA3gDw/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1ygDCxhA21EyPA4jlLt6cP388DIprcoENNkFBQ0rUbBc/edit?usp=sharing", likes: 0, play: "./Song Clips/Way Maker.m4a"},
-  { song: "Breakthrough", author: "Eddie James", ratings:[], chord: "https://docs.google.com/document/d/1OlpqVUuK51BXAYagRe2quklaMPi3olh4YqDRwuuoDRs/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1QplYCoFFmbAro1ZMsrpQ9OSWcF1dL5U0nuShUKfW5yc/edit?usp=sharing", likes: 0, play:"./Song Clips/Breakthrough.m4a"},
-  { song: "Let the Heavens Open", author: "Christina D'Clario", ratings: []},
-  { song: "See a Victory", author: "Elevation Worship", ratings:[]},
-  { song: "Famous For", author: "Tauren Wells", ratings:[]},
-  { song: "Glorious Day", author: "Kristian Stanfill", ratings:[]},
-  { song: "Throne Room", author: "Charity Gayle", ratings:[]},
-  { song: "He's Alive", author: "Eddie James", ratings:[]},
-  { song: "Ever Be", author: "Aaron Shust", ratings:[]},
-  { song: "Do It Again", author: "Elevation Worship", ratings:[]},
-];
-
-document.addEventListener("DOMContentLoaded", (event) => {var table = document.getElementById("myTable");
-  list.map( (e) => {
-  var row = document.createElement('tr');
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-  var cell3 = row.insertCell(2);
-  var cell4 = row.insertCell(3);
-  var cell5 = row.insertCell(4);
-  var cell6 = row.insertCell(5);
-  var cell7 = row.insertCell(6);
-
-  cell1.innerHTML = e.song;
-  cell2.innerHTML = e.author;
-  cell3.innerHTML = e.ratings;
-  cell4.innerHTML = '<button id= "chord" onclick = "songChords(this)" value ='+e.chord+'>Chord</button>';
-  cell5.innerHTML = '<button id= "spanishChord" onclick = "spanishChords(this)" value = '+e.spanishChord+'>Spanish</button>';
-  cell6.innerHTML = '<button id= "likes" onclick = "songLikes(like=0)" value = '+e.likes+'>Like</button>';
-  cell7.innerHTML = '<button id= "play" onclick = "musicClip()" value = '+e.play+'>Clip</button>';
-  table.appendChild(row);
-  })})
 
 // function myFunction() {
 //   var table = document.getElementById("myTable");
