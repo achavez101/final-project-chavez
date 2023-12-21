@@ -21,9 +21,9 @@ body {
   background-color:#03045e;
   color:white;
 }
-#songSort:hover, #authorSort:hover, #save:hover {
+/* #songSort:hover, #authorSort:hover, #save:hover {
   background-color: #4a4cbf;
-}
+} */
 .stars-outer {
     position: relative;
     display: inline-block;
