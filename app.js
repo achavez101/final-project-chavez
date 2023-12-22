@@ -1,139 +1,187 @@
-    // Future OOP
+// button for several functions
+// ratings to work 
+// save everything to local storage
+// how to get values to work with input
 
-    let list = [
-      { value: 1, song: "Way Maker", author: "Sinach", ratings:[], chord: "https://docs.google.com/document/d/1Fp2Z1xj5vCCoJ57bMtZwC65-l_F7wKZMRmTLDsA3gDw/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1ygDCxhA21EyPA4jlLt6cP388DIprcoENNkFBQ0rUbBc/edit?usp=sharing", likes: "1", play: "./Song Clips/Way Maker.m4a"},
-      { value: 2, song: "Breakthrough", author: "Eddie James", ratings:[], chord: "https://docs.google.com/document/d/1OlpqVUuK51BXAYagRe2quklaMPi3olh4YqDRwuuoDRs/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1QplYCoFFmbAro1ZMsrpQ9OSWcF1dL5U0nuShUKfW5yc/edit?usp=sharing", likes: "2", play:"./Song Clips/Breakthrough.m4a"},
-      { value: 3, song: "Let the Heavens Open", author: "Christina D'Clario", ratings: [], chord: "", spanishChord: "", likes: "3", play: ""},
-      { value: 4, song: "See a Victory", author: "Elevation Worship", ratings:[], chord: "", spanishChord: "", likes: "4", play: ""},
-      { value: 5, song: "Famous For", author: "Tauren Wells", ratings:[], chord: "", spanishChord: "", likes: "5", play: ""},
-      { value: 6, song: "Glorious Day", author: "Kristian Stanfill", ratings:[], chord: "", spanishChord: "", likes: "6", play: ""},
-      { value: 7, song: "Throne Room", author: "Charity Gayle", ratings:[], chord: "", spanishChord: "", likes: "7", play: ""},
-      { value: 8, song: "He's Alive", author: "Eddie James", ratings:[], chord: "", spanishChord: "", likes: "8", play: ""},
-      { value: 9, song: "Ever Be", author: "Aaron Shust", ratings:[], chord: "", spanishChord: "", likes: "9", play: ""},
-      { value: 10, song: "Do It Again", author: "Elevation Worship", ratings:[], chord: "", spanishChord: "", likes: "10", play: ""},
-    ];
+
+// List Array for Table
+
+  let list = [
+    { value: 1, song: "Way Maker", author: "Sinach", ratings:[], chord: "https://docs.google.com/document/d/1Fp2Z1xj5vCCoJ57bMtZwC65-l_F7wKZMRmTLDsA3gDw/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1ygDCxhA21EyPA4jlLt6cP388DIprcoENNkFBQ0rUbBc/edit?usp=sharing", likes: "1", play: "./clips/WayMaker"},
+    { value: 2, song: "Breakthrough", author: "Eddie James", ratings:[], chord: "https://docs.google.com/document/d/1OlpqVUuK51BXAYagRe2quklaMPi3olh4YqDRwuuoDRs/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1QplYCoFFmbAro1ZMsrpQ9OSWcF1dL5U0nuShUKfW5yc/edit?usp=sharing", likes: "2", play:"./clips/Breakthrough.m4a"},
+    { value: 3, song: "Let the Heavens Open", author: "Christina D'Clario", ratings: [], chord: "https://docs.google.com/document/d/10HpkABDQJh5IFvRV8povJS7cItvWPz_Q2FQ7d2Krv0w/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1lOcdiujBd0gb4-VGWT6biaAhtKfBMyclpkxsP_u2JLI/edit?usp=sharing", likes: "3", play: ""},
+    { value: 4, song: "See a Victory", author: "Elevation Worship", ratings:[], chord: "https://docs.google.com/document/d/13BzAmQ1pNpz5Gk0pnDgGZVdbWqsJMRqcX_qzhOxQEhs/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1UcsrWD7bbmCKs1daKF2h5XTV2vyJb_Vu6sXPgjJbbZc/edit?usp=sharing", likes: "4", play: "./clips/SeeAVictory.m4a"},
+    { value: 5, song: "Famous For", author: "Tauren Wells", ratings:[], chord: "https://docs.google.com/document/d/1J1KZPsw3buciV2wgWO3BTSIAwzShp6i4wdxZkEpyqQc/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/16MVm3tbT-giv7lkW536GOii9j07PvfpAG1Yl0YywzbQ/edit?usp=sharing", likes: "5", play: "./clips/FamousFor.m4a"},
+    { value: 6, song: "Glorious Day", author: "Kristian Stanfill", ratings:[], chord: "https://docs.google.com/document/d/1o8Xqc4lT34gDsZ0AmofeO5FUBJOnlDW7h9M3gXxcac4/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1gZZIR0SOd9YrC6kpBaGOQmf-LRyrS1zpcJuTkv6naTw/edit?usp=sharing", likes: "6", play: "./clips/Glorious Day.m4a"},
+    { value: 7, song: "Throne Room", author: "Charity Gayle", ratings:[], chord: "https://docs.google.com/document/d/1gD44LVEkI8_ihOm5s1QF1Y2wTNeMDSgiBCDNFZI3HgE/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1Gc1XAJsqqI1Upc0xlK8EWcgRxVoZY5mZCSeuuByFZaU/edit?usp=sharing", likes: "7", play: "./clips/ThroneRoom.m4a"},
+    { value: 8, song: "He's Alive", author: "Eddie James", ratings:[], chord: "https://docs.google.com/document/d/1t6zzatpxl4uWqcw47251H7wbQSRqo0g8aH9gL8bChxg/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/18zkixkHsBUbfJnZU9x6tz_mKMpK8Zc_UVWn4H_nDyFc/edit?usp=sharing", likes: "8", play: ""},
+    { value: 9, song: "Ever Be", author: "Aaron Shust", ratings:[], chord: "https://docs.google.com/document/d/1Y-Uv6Lq33T52qy7lK5I-HckHdM2PSvNZsyYoud_bQ_A/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1M7qpMa2NZ-gvBMGjp4G7o8W4tGfaG98QvG97w504Cx8/edit?usp=sharing", likes: "9", play: "./clips/EverBe.m4a"},
+    { value: 10, song: "Do It Again", author: "Elevation Worship", ratings:[], chord: "https://docs.google.com/document/d/1pi58zvl_DnRy8PTkTKqDZ-rNI-SQQk6QRIBl9QNKyc4/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1yulnR3F-dvQ60TPOral2Uvf-cTkE0w2OSCe4uGhQGIs/edit?usp=sharing", likes: "10", play: "./clips/ThroneRoom.m4a"},
+  ];
     
-    document.addEventListener("DOMContentLoaded", (event) => {var table = document.getElementById("myTable");
-      list.map( (e) => {
-      var row = document.createElement('tr');
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      var cell3 = row.insertCell(2);
-      var cell4 = row.insertCell(3);
-      var cell5 = row.insertCell(4);
-      var cell6 = row.insertCell(5);
-      var cell7 = row.insertCell(6);
-    
-      cell1.innerHTML = e.song;
-      cell2.innerHTML = e.author;
-      cell3.innerHTML = '<div class="stars-outer"><div class="stars-inner"></div></div><span class="number-rating></span>';
-      cell4.innerHTML = '<button id= "chord" onclick = "songChords(this)"value ='+e.chord+'>Chord</button>';
-      cell5.innerHTML = '<button id= "spanishChord" onclick = "spanishChords(this)" value = '+e.spanishChord+'>Spanish</button>';
-      cell6.innerHTML = '<button id= "likes" onclick = "songLikes(this)" value = '+e.likes+'> <i class ="fa fa-thumbs-up"></i></button>';
-      cell7.innerHTML = '<button id= "play" onclick = "musicClip()" value = '+e.play+'>Clip</button>';
-      table.appendChild(row);
-      })})
+  document.addEventListener("DOMContentLoaded", (event) => {var table = document.getElementById("myTable");
+    list.map( (e) => {
+    var row = document.createElement('tr');
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+    var cell6 = row.insertCell(5);
+    var cell7 = row.insertCell(6);
+  
+    cell1.innerHTML = e.song;
+    cell2.innerHTML = e.author;
+    cell3.innerHTML = '<div class="stars-outer"><div class="stars-inner"></div></div><span class="number-rating></span>';
+    cell4.innerHTML = '<button id= "chord" onclick = "songChords(this)"value ='+e.chord+'>Chord</button>';
+    cell5.innerHTML = '<button id= "spanishChord" onclick = "spanishChords(this)" value = '+e.spanishChord+'>Spanish</button>';
+    cell6.innerHTML = '<button id= "likes" onclick = "songLikes(this)" value = '+e.likes+'> <i class ="fa fa-thumbs-up"></i></button>';
+    cell7.innerHTML = '<button id= "play" onclick = "musicClip(this)" value = '+e.play+'>Clip</button>';
+    table.appendChild(row);
+    })})
 
-  // English Chord Links
-  function songChords(link) {
-    window.open(link.value);
-    }
+// English Chord Links
+function songChords(link) {
+  window.open(link.value);
+  }
 
-    // Spanish Chord Links
-    function spanishChords(link) {
-    window.open(link.value);
-    }
+  // Spanish Chord Links
+  function spanishChords(link) {
+  window.open(link.value);
+  }
 
-    // JavaScript Like button
-    let thumb = true;
+  // Function for Likes
+  let thumb = true;
 
-    function songLikes(element){
-        if(thumb){
-            currentElement = element.querySelector('.fa-thumbs-up');
-            currentElement.style.color = "green";
-            localStorage.setItem("key", "liked");
-    
-        }else{
-            const currentElement = element.querySelector('.fa-thumbs-up');
-            currentElement.style.color = "red";
-            localStorage.setItem("key", "unliked");
-        }
-        thumb = !thumb;
-    }
-    
+  function songLikes(element){
+      if(thumb){
+          currentElement = element.querySelector('.fa-thumbs-up');
+          currentElement.style.color = "green";
+          localStorage.setItem("key", "liked");
+  
+      }else{
+          const currentElement = element.querySelector('.fa-thumbs-up');
+          currentElement.style.color = "red";
+          localStorage.setItem("key", "unliked");
+      }
+      thumb = !thumb;
+  }
+  
     // window.addEventListener('DOMContentLoaded', e => {
     //     currentElement.style.color = localStorage.getItem("key");
     // });
 
 
-// Default Ratings
-  const ratings = {
-  song1: 1.0,
-  song2: 1.0,
-  song3: 1.0,
-  song4: 1.0,
-  song5: 1.0,
-  song6: 1.0,
-  song7: 1.0,
-  song8: 1.0,
-  song9: 1.0, 
-  song10: 1.0
-  }
+  // These are the arrays where we would play
+  // list[0].play
+  // list[1].play
+  // list[2].play
+  // list[3].play
+  // list[4].play
+  // list[5].play
+  // list[6].play
+  // list[7].play
+  // list[8].play
+  // list[9].play
+  // list[10].play
 
-  // // Total Stars
-  const starsTotal = 5;
+  // play.list[0].play
+  
+  // Function For Music Clips
 
-  // // Run getRatings when DOM loads
-  document.addEventListener('DOMContentLoaded', getRatings);
+  // function musicClip() {
+  //   for(i=0; i<list.play.length, i++) {
+  //     let audio = document.getElementById('play').list[i].play;
+  //   }
+  //   // let plays = false;
+  //   // if(plays) {
+  //   //   audio.pause();
+  //   // }
+  //   // else {
+  //   //   audio.play()
+  //   // }
+  //   // plays = !plays;
+  
+  // }
+ 
+  
 
-  // // Form Elements
-  const songSelect = document.getElementById('song-select');
-  const ratingControl = document.getElementById('rating-control');
+  // play audio on condition that the individual button is clicked
+      // if else if
+  // pause audio on condition that the individual button is clicked
+      // if else if
+  // array for doing that for each button and will select this to ensure that it's only when this button is clicked
+      // event Listener
 
-  let song;
+  // Ratings 
+  // Default Ratings
+  // const ratings = {
+  // song1: 1.0,
+  // song2: 1.0,
+  // song3: 1.0,
+  // song4: 1.0,
+  // song5: 1.0,
+  // song6: 1.0,
+  // song7: 1.0,
+  // song8: 1.0,
+  // song9: 1.0, 
+  // song10: 1.0
+  // }
 
-  // // Song select change
-  songSelect.addEventListener('change', (e) => {
-    song = e.target.value;
-    // Enable rating control input
-    ratingControl.disabled = false;
-    ratingControl.value = ratings[song];
-  });
+  // // // Total Stars
+  // const starsTotal = 5;
 
-  // Rating control change
-  ratingControl.addEventListener('blur', (e) => {
-    const rating = e.target.value;
+  // // // Run getRatings when DOM loads
+  // document.addEventListener('DOMContentLoaded', getRatings);
 
-    // Make sure 5 or under
-    if (rating > 5) {
-      alert('Please rate 1 - 5');
-      return;
-    }
-    // Change rating
-    ratings[song] = rating;
+  // // // Form Elements
+  // const songSelect = document.getElementById('song-select');
+  // const ratingControl = document.getElementById('rating-control');
+
+  // let song;
+
+  // // // Song select change
+  // songSelect.addEventListener('change', (e) => {
+  //   song = e.target.value;
+  //   // Enable rating control input
+  //   ratingControl.disabled = false;
+  //   ratingControl.value = ratings[song];
+  // });
+
+  // // Rating control change
+  // ratingControl.addEventListener('blur', (e) => {
+  //   const rating = e.target.value;
+
+  //   // Make sure 5 or under
+  //   if ((rating > 5) || (rating < 1)) {
+  //     alert('Please rate 1 - 5');
+  //     return;
+  //   }
+  //   // Change rating
+  //   ratings[song] = rating;
     
-    getRatings();
+  //   getRatings();
 
-  });
+  // });
 
-    // // Get ratings
-    function getRatings() {
-      for (let rating in ratings) {
-        // Get percentage
-        const starPercentage = (ratings[rating] / starsTotal) * 100;
-  
-        // Round to nearest 10
-        const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
-  
-        // Set width of stars-inner to percentage
-        document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded;
-  
-        document.querySelector(`${rating-control} #number-rating`).style.width = starPercentageRounded;
-  
-        // Add number rating
-        document.querySelector(`.${rating} .number-rating`).innerHTML = ratings[rating];
-      }
-    }
+  // // Get ratings
+  // function getRatings() {
+  //   for (let rating in ratings) {
+  //     // Get percentage
+  //     const starPercentage = (ratings[rating] / starsTotal) * 100;
+
+  //     // Round to nearest 10
+  //     const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
+
+  //     // Set width of stars-inner to percentage
+  //     document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded;
+
+  //     document.querySelector(`${rating-control} #number-rating`).style.width = starPercentageRounded;
+
+  //     // Add number rating
+  //     document.querySelector(`.${rating} .number-rating`).innerHTML = ratings[rating];
+  //   }
+  // }
 
 
 
