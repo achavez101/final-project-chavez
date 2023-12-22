@@ -89,6 +89,44 @@ function songChords(link) {
   
   // Function For Music Clips
 
+  let music = document.getElementById('play'); 
+
+  function musicClip() {
+    if(music == list[0].play) {
+      music.play();
+    }
+    else if(music == list[1].play) {
+      music.play();
+    }
+    else if(music == list[2].play) {
+      music.play();
+    }
+    else if(music == list[3].play) {
+      music.play();
+    }
+    else if(music == list[4].play) {
+      music.play();
+    }
+    else if(music == list[5].play) {
+      music.play();
+    }
+    else if(music == list[6].play) {
+      music.play();
+    }
+    else if(music == list[7].play) {
+      music.play();
+    }
+    else if(music == list[8].play) {
+      music.play();
+    }
+    else if(music == list[9].play) {
+      music.play();
+    }
+    else if(music == list[10].play) {
+      music.play();
+    }
+  }
+
   // function musicClip() {
   // int num;
   //   for(i=0; i<list]num].play.length, i++) {
