@@ -90,8 +90,10 @@ function songChords(link) {
   // Function For Music Clips
 
   // function musicClip() {
-  //   for(i=0; i<list.play.length, i++) {
-  //     let audio = document.getElementById('play').list[i].play;
+  // int num;
+  //   for(i=0; i<list]num].play.length, i++) {
+  //     let audio = document.getElementById('play').list[num].play;
+  //      i++;
   //   }
   //   // let plays = false;
   //   // if(plays) {
