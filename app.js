@@ -7,12 +7,12 @@
 // List Array for Table
 
   let list = [
-    { value: 1, song: "Way Maker", author: "Sinach", ratings:[], chord: "https://docs.google.com/document/d/1Fp2Z1xj5vCCoJ57bMtZwC65-l_F7wKZMRmTLDsA3gDw/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1ygDCxhA21EyPA4jlLt6cP388DIprcoENNkFBQ0rUbBc/edit?usp=sharing", likes: "1", play: "./clips/WayMaker"},
+    { value: 1, song: "Way Maker", author: "Sinach", ratings:[], chord: "https://docs.google.com/document/d/1Fp2Z1xj5vCCoJ57bMtZwC65-l_F7wKZMRmTLDsA3gDw/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1ygDCxhA21EyPA4jlLt6cP388DIprcoENNkFBQ0rUbBc/edit?usp=sharing", likes: "1", play: "./clips/WayMaker.m4a"},
     { value: 2, song: "Breakthrough", author: "Eddie James", ratings:[], chord: "https://docs.google.com/document/d/1OlpqVUuK51BXAYagRe2quklaMPi3olh4YqDRwuuoDRs/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1QplYCoFFmbAro1ZMsrpQ9OSWcF1dL5U0nuShUKfW5yc/edit?usp=sharing", likes: "2", play:"./clips/Breakthrough.m4a"},
     { value: 3, song: "Let the Heavens Open", author: "Christina D'Clario", ratings: [], chord: "https://docs.google.com/document/d/10HpkABDQJh5IFvRV8povJS7cItvWPz_Q2FQ7d2Krv0w/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1lOcdiujBd0gb4-VGWT6biaAhtKfBMyclpkxsP_u2JLI/edit?usp=sharing", likes: "3", play: ""},
     { value: 4, song: "See a Victory", author: "Elevation Worship", ratings:[], chord: "https://docs.google.com/document/d/13BzAmQ1pNpz5Gk0pnDgGZVdbWqsJMRqcX_qzhOxQEhs/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1UcsrWD7bbmCKs1daKF2h5XTV2vyJb_Vu6sXPgjJbbZc/edit?usp=sharing", likes: "4", play: "./clips/SeeAVictory.m4a"},
     { value: 5, song: "Famous For", author: "Tauren Wells", ratings:[], chord: "https://docs.google.com/document/d/1J1KZPsw3buciV2wgWO3BTSIAwzShp6i4wdxZkEpyqQc/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/16MVm3tbT-giv7lkW536GOii9j07PvfpAG1Yl0YywzbQ/edit?usp=sharing", likes: "5", play: "./clips/FamousFor.m4a"},
-    { value: 6, song: "Glorious Day", author: "Kristian Stanfill", ratings:[], chord: "https://docs.google.com/document/d/1o8Xqc4lT34gDsZ0AmofeO5FUBJOnlDW7h9M3gXxcac4/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1gZZIR0SOd9YrC6kpBaGOQmf-LRyrS1zpcJuTkv6naTw/edit?usp=sharing", likes: "6", play: "./clips/Glorious Day.m4a"},
+    { value: 6, song: "Glorious Day", author: "Kristian Stanfill", ratings:[], chord: "https://docs.google.com/document/d/1o8Xqc4lT34gDsZ0AmofeO5FUBJOnlDW7h9M3gXxcac4/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1gZZIR0SOd9YrC6kpBaGOQmf-LRyrS1zpcJuTkv6naTw/edit?usp=sharing", likes: "6", play: "./clips/GloriousDay.m4a"},
     { value: 7, song: "Throne Room", author: "Charity Gayle", ratings:[], chord: "https://docs.google.com/document/d/1gD44LVEkI8_ihOm5s1QF1Y2wTNeMDSgiBCDNFZI3HgE/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1Gc1XAJsqqI1Upc0xlK8EWcgRxVoZY5mZCSeuuByFZaU/edit?usp=sharing", likes: "7", play: "./clips/ThroneRoom.m4a"},
     { value: 8, song: "He's Alive", author: "Eddie James", ratings:[], chord: "https://docs.google.com/document/d/1t6zzatpxl4uWqcw47251H7wbQSRqo0g8aH9gL8bChxg/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/18zkixkHsBUbfJnZU9x6tz_mKMpK8Zc_UVWn4H_nDyFc/edit?usp=sharing", likes: "8", play: ""},
     { value: 9, song: "Ever Be", author: "Aaron Shust", ratings:[], chord: "https://docs.google.com/document/d/1Y-Uv6Lq33T52qy7lK5I-HckHdM2PSvNZsyYoud_bQ_A/edit?usp=sharing", spanishChord: "https://docs.google.com/document/d/1M7qpMa2NZ-gvBMGjp4G7o8W4tGfaG98QvG97w504Cx8/edit?usp=sharing", likes: "9", play: "./clips/EverBe.m4a"},
@@ -36,7 +36,7 @@
     cell4.innerHTML = '<button id= "chord" onclick = "songChords(this)"value ='+e.chord+'>Chord</button>';
     cell5.innerHTML = '<button id= "spanishChord" onclick = "spanishChords(this)" value = '+e.spanishChord+'>Spanish</button>';
     cell6.innerHTML = '<button id= "likes" onclick = "songLikes(this)" value = '+e.likes+'> <i class ="fa fa-thumbs-up"></i></button>';
-    cell7.innerHTML = '<button id= "play" onclick = "musicClip(this)" value = '+e.play+'>Clip</button>';
+    cell7.innerHTML = '<button  onClick="musicClip()"><audio id="play" src='+e.play+'></audio>Clip</button>';
     table.appendChild(row);
     })})
 
@@ -89,43 +89,102 @@ function songChords(link) {
   
   // Function For Music Clips
 
-  let music = document.getElementById('play'); 
-
+ 
+  // got it to play this way
+  // just one audio
   function musicClip() {
-    if(music == list[0].play) {
-      music.play();
-    }
-    else if(music == list[1].play) {
-      music.play();
-    }
-    else if(music == list[2].play) {
-      music.play();
-    }
-    else if(music == list[3].play) {
-      music.play();
-    }
-    else if(music == list[4].play) {
-      music.play();
-    }
-    else if(music == list[5].play) {
-      music.play();
-    }
-    else if(music == list[6].play) {
-      music.play();
-    }
-    else if(music == list[7].play) {
-      music.play();
-    }
-    else if(music == list[8].play) {
-      music.play();
-    }
-    else if(music == list[9].play) {
-      music.play();
-    }
-    else if(music == list[10].play) {
-      music.play();
-    }
+    var music = document.getElementById('play');
+    music.play();
   }
+
+
+
+  // function musicClip() {
+  //   var music = document.getElementById('play');
+  //   if(music==list[0].play){
+  //     music.play();
+  //   }
+  //   else if(music == list[1].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[2].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[3].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[4].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[5].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[6].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[7].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[8].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[9].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[10].play) {
+  //     music.play();
+  //   }
+
+  // }
+
+
+  // let music = document.getElementById('play'); 
+
+
+  // function musicClip() {
+  //   //number of tracks
+  //   var i = 0;
+  //   // id of button
+  //   var music = document.getElementById('play');
+  //   music.value = (list[i].play);
+  //   i++;
+  // }
+
+  // function musicClip() {
+  //   if(music == list[0].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[1].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[2].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[3].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[4].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[5].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[6].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[7].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[8].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[9].play) {
+  //     music.play();
+  //   }
+  //   else if(music == list[10].play) {
+  //     music.play();
+  //   }
+  // }
 
   // function musicClip() {
   // int num;
@@ -152,6 +211,7 @@ function songChords(link) {
       // if else if
   // array for doing that for each button and will select this to ensure that it's only when this button is clicked
       // event Listener
+  // can also do forEach
 
   // Ratings 
   // Default Ratings
