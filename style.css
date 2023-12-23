@@ -4,7 +4,7 @@ body {
 #songInfo {
   color:#03045e;
 }
-#songInfo {
+#songInfo, #welcome {
   display: flex;
   justify-content: center;
   color: #03045e;
