@@ -1,12 +1,22 @@
 body {
   background-color: #caf0f8;
 }
-#welcome {
+#songInfo {
+  color:#03045e;
+}
+#songInfo {
   display: flex;
   justify-content: center;
   color: #03045e;
 }
-#chord, #spanishChord, #likes, #play {
+#genre {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: white;
+  color:blue;
+}
+#chord, #spanishChord, #likes, #play, #info {
   background-color: #03d4fe;
 }
 #chord:hover, #spanishChord:hover, #likes:hover, #play:hover {
@@ -16,38 +26,4 @@ body {
   background-color: white;
   padding-right: 5px;
   border:#03045e;
-}
-#songSort, #authorSort, #save{
-  background-color:#03045e;
-  color:white;
-}
-/* #songSort:hover, #authorSort:hover, #save:hover {
-  background-color: #4a4cbf;
-} */
-.stars-outer {
-    position: relative;
-    display: inline-block;
-}
-  
-.stars-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-}
-  
-.stars-outer::before {
-    content: "\f005 \f005 \f005 \f005 \f005";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: #ccc;
-}
-  
-.stars-inner::before {
-    content: "\f005 \f005 \f005 \f005 \f005";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: #f7d53e;
 }
