@@ -71,9 +71,11 @@ function songChords(link) {
     // if(localStorage.getItem("likes") == []){
     //   clickCount++;
     // }
-    display.innerHTML = ('Total Likes', list[clickCount].likes);
+
     localStorage.setItem('Total Likes', list[clickCount].likes);
+    display.innerHTML = ('Total Likes', list[clickCount].likes);
     list[clickCount].likes++;
+  
     // count restarts on page refresh
   }
 
