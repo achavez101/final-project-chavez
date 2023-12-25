@@ -36,7 +36,6 @@
     table.appendChild(row);
     })})
 
-
     //<i class ="fa fa-thumbs-up"></i> 
 
 // English Chord Links
@@ -83,17 +82,22 @@ function songChords(link) {
   // Bottom Portion
   // Song Button Info at Bottom
   function song1() {
+    // access list array portions to place into a paragraph tag that provides further information on songs
     document.getElementById("genre").innerHTML = "Song Name: " + list[0].song + "<br> Author: " + list[0].author + "<br> Year Released: " + list[0].year + "<br> Genre: " + list[0].genre;
   }
   function song1Like(x) {
+    //accesses thumbs down toggle
     x.classList.toggle("fa-thumbs-down");
 
+    //if localstorage has breakthrough in it as a key, toggle it
     if(+window.localStorage.getItem('Breakthrough')){
       $("html").toggleClass("Breakthrough");
     }
+    //if the value is empty, add liked
     if(window.localStorage.getItem('Breakthrough', '')){
       window.localStorage.setItem('Breakthrough', 'liked');
     }
+    //if the value is not empty and has liked in it, change to unliked because icon has been toggled
     else {
       window.localStorage.setItem('Breakthrough', 'unliked');
     }
