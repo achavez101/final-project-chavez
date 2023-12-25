@@ -84,7 +84,7 @@ function songChords(link) {
   // Song Button Info at Bottom
 
   function song1() {
-    document.getElementById("genre").innerHTML = "Song Name: " + list[0].song + "<br> Author: " + list[0].author + "<br> Year Created: " + list[0].year + "<br> Genre: " + list[0].genre;
+    document.getElementById("genre").innerHTML = "Song Name: " + list[0].song + "<br> Author: " + list[0].author + "<br> Year Released: " + list[0].year + "<br> Genre: " + list[0].genre;
   }
   function song1Like(x) {
     x.classList.toggle("fa-thumbs-down");
@@ -101,7 +101,7 @@ function songChords(link) {
     }
   }
   function song2() {
-    document.getElementById("genre").innerHTML = "Song Name: " + list[1].song + "<br> Author: " + list[1].author + "<br> Year Created: " + list[1].year + "<br> Genre: " + list[1].genre;
+    document.getElementById("genre").innerHTML = "Song Name: " + list[1].song + "<br> Author: " + list[1].author + "<br> Year Released: " + list[1].year + "<br> Genre: " + list[1].genre;
   }
   function song2Like(x) {
     x.classList.toggle("fa-thumbs-down");
@@ -117,7 +117,7 @@ function songChords(link) {
     }
   }
   function song3() {
-    document.getElementById("genre").innerHTML = "Song Name: " + list[2].song + "<br> Author: " + list[2].author + "<br> Year Created: " + list[2].year + "<br> Genre: " + list[2].genre;
+    document.getElementById("genre").innerHTML = "Song Name: " + list[2].song + "<br> Author: " + list[2].author + "<br> Year Released: " + list[2].year + "<br> Genre: " + list[2].genre;
   }
   function song3Like(x) {
     x.classList.toggle("fa-thumbs-down");
@@ -133,7 +133,7 @@ function songChords(link) {
     }
   }
   function song4() {
-    document.getElementById("genre").innerHTML = "Song Name: " + list[3].song + "<br> Author: " + list[3].author + "<br> Year Created: " + list[3].year + "<br> Genre: " + list[3].genre;
+    document.getElementById("genre").innerHTML = "Song Name: " + list[3].song + "<br> Author: " + list[3].author + "<br> Year Released: " + list[3].year + "<br> Genre: " + list[3].genre;
   }
   function song4Like(x) {
     x.classList.toggle("fa-thumbs-down");
@@ -150,7 +150,7 @@ function songChords(link) {
     }
   }
   function song5() {
-    document.getElementById("genre").innerHTML = "Song Name: " + list[4].song + "<br> Author: " + list[4].author + "<br> Year Created: " + list[4].year + "<br> Genre: " + list[4].genre;
+    document.getElementById("genre").innerHTML = "Song Name: " + list[4].song + "<br> Author: " + list[4].author + "<br> Year Released: " + list[4].year + "<br> Genre: " + list[4].genre;
   }
   function song5Like(x) {
     x.classList.toggle("fa-thumbs-down");
@@ -166,7 +166,7 @@ function songChords(link) {
     }
   }
   function song6() {
-    document.getElementById("genre").innerHTML = "Song Name: " + list[5].song + "<br> Author: " + list[5].author + "<br> Year Created: " + list[5].year + "<br> Genre: " + list[5].genre;
+    document.getElementById("genre").innerHTML = "Song Name: " + list[5].song + "<br> Author: " + list[5].author + "<br> Year Released: " + list[5].year + "<br> Genre: " + list[5].genre;
   }
   function song6Like(x) {
     x.classList.toggle("fa-thumbs-down");
@@ -183,7 +183,7 @@ function songChords(link) {
     }
   }
   function song7() {
-    document.getElementById("genre").innerHTML = "Song Name: " + list[6].song + "<br> Author: " + list[6].author + "<br> Year Created: " + list[6].year + "<br> Genre: " + list[6].genre;
+    document.getElementById("genre").innerHTML = "Song Name: " + list[6].song + "<br> Author: " + list[6].author + "<br> Year Released: " + list[6].year + "<br> Genre: " + list[6].genre;
   }
   function song7Like(x) {
     x.classList.toggle("fa-thumbs-down");
@@ -200,7 +200,7 @@ function songChords(link) {
     }
   }
   function song8() {
-    document.getElementById("genre").innerHTML = "Song Name: " + list[7].song + "<br> Author: " + list[7].author + "<br> Year Created: " + list[7].year + "<br> Genre: " + list[7].genre;
+    document.getElementById("genre").innerHTML = "Song Name: " + list[7].song + "<br> Author: " + list[7].author + "<br> Year Released: " + list[7].year + "<br> Genre: " + list[7].genre;
   }
   function song8Like(x) {
     x.classList.toggle("fa-thumbs-down");
@@ -215,7 +215,7 @@ function songChords(link) {
     }
   }
   function song9() {
-    document.getElementById("genre").innerHTML = "Song Name: " + list[8].song + "<br> Author: " + list[8].author + "<br> Year Created: " + list[8].year + "<br> Genre: " + list[8].genre;
+    document.getElementById("genre").innerHTML = "Song Name: " + list[8].song + "<br> Author: " + list[8].author + "<br> Year Released: " + list[8].year + "<br> Genre: " + list[8].genre;
   }
   function song9Like(x) {
     x.classList.toggle("fa-thumbs-down");
@@ -230,7 +230,7 @@ function songChords(link) {
     }
   }
   function song10() {
-    document.getElementById("genre").innerHTML = "Song Name: " + list[9].song + "<br> Author: " + list[9].author + "<br> Year Created: " + list[9].year + "<br> Genre: " + list[9].genre;
+    document.getElementById("genre").innerHTML = "Song Name: " + list[9].song + "<br> Author: " + list[9].author + "<br> Year Released: " + list[9].year + "<br> Genre: " + list[9].genre;
   }
   function song10Like(x) {
     x.classList.toggle("fa-thumbs-down");
