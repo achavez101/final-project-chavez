@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Like the Song?</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Font Awesome -->
-    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <!-- <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -26,7 +27,7 @@
               <th>Chord Sheets</th>
               <th>Spanish Chords</th>
               <th>Do You Like the Song?</th>
-              <th>Audio (Click to Play/Pause)</th>
+              <th>Audio</th>
               <th>Total Likes</th>
             </tr>
           </thead>
@@ -38,15 +39,36 @@
         <div>
           <p id="genre"></p>
           <button id="info" onClick="song1()" >Breakthrough Info</button>
+          <i onclick="song1Like(this)" class="fa fa-thumbs-up"></i>
+          <br>
           <button id="info" onClick="song2()" >Do It Again Info</button>
+          <i onclick="song2Like(this)" class="fa fa-thumbs-up"></i>
+          <br>
           <button id="info" onClick="song3()" >Ever Be Info</button>
+          <i onclick="song3Like(this)" class="fa fa-thumbs-up"></i>
+          <br>
           <button id="info" onClick="song4()" >Famous For Info</button>
+          <i onclick="song4Like(this)" class="fa fa-thumbs-up"></i>
+          <br>
           <button id="info" onClick="song5()" >Glorious Day Info</button>
+          <i onclick="song5Like(this)" class="fa fa-thumbs-up"></i>
+          <br>
           <button id="info" onClick="song6()" >He's Alive Info</button>
+          <i onclick="song6Like(this)" class="fa fa-thumbs-up"></i>
+          <br>
           <button id="info" onClick="song7()" >Let The Heavens Open Info</button>
+          <i onclick="song7Like(this)" class="fa fa-thumbs-up"></i>
+          <br>
           <button id="info" onClick="song8()" >See A Victory Info</button>
+          <i onclick="song8Like(this)" class="fa fa-thumbs-up"></i>
+          <br>
           <button id="info" onClick="song9()" >Throne Room Info</button>
+          <i onclick="song9Like(this)" class="fa fa-thumbs-up"></i>
+          <br>
           <button id="info" onClick="song10()" >Way Maker Info</button>
+          <i onclick="song10Like(this)" class="fa fa-thumbs-up"></i>
+          <br>
+          
         </div>
 
       </div>

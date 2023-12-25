@@ -27,3 +27,11 @@ body {
   padding-right: 5px;
   border:#03045e;
 }
+.fa {
+  font-size: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+.fa:hover {
+  color: darkblue;
+}
