@@ -82,7 +82,6 @@ function songChords(link) {
 
   // Bottom Portion
   // Song Button Info at Bottom
-
   function song1() {
     document.getElementById("genre").innerHTML = "Song Name: " + list[0].song + "<br> Author: " + list[0].author + "<br> Year Released: " + list[0].year + "<br> Genre: " + list[0].genre;
   }
