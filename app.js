@@ -88,7 +88,6 @@ function songChords(link) {
   }
   function song1Like(x) {
     x.classList.toggle("fa-thumbs-down");
-    localStorage.setItem('like', 'Breakthrough');
 
     if(+window.localStorage.getItem('Breakthrough')){
       $("html").toggleClass("Breakthrough");
@@ -137,7 +136,6 @@ function songChords(link) {
   }
   function song4Like(x) {
     x.classList.toggle("fa-thumbs-down");
-    localStorage.setItem('like', 'Famous For');
 
     if(+window.localStorage.getItem('Famous For')){
       $("html").toggleClass("Famous For")
@@ -170,7 +168,6 @@ function songChords(link) {
   }
   function song6Like(x) {
     x.classList.toggle("fa-thumbs-down");
-    localStorage.setItem('like', "He's Alive");
 
     if(+window.localStorage.getItem("He's Alive")){
       $("html").toggleClass("He's Alive")
@@ -187,7 +184,6 @@ function songChords(link) {
   }
   function song7Like(x) {
     x.classList.toggle("fa-thumbs-down");
-    localStorage.setItem('like', 'Let The Heavens Open');
 
     if(+window.localStorage.getItem('Let The Heavens Open')){
       $("html").toggleClass("Let The Heavens Open")
@@ -204,6 +200,7 @@ function songChords(link) {
   }
   function song8Like(x) {
     x.classList.toggle("fa-thumbs-down");
+
     if(+window.localStorage.getItem('See A Victory')){
       $("html").toggleClass("See A Victory")
     }
@@ -219,6 +216,7 @@ function songChords(link) {
   }
   function song9Like(x) {
     x.classList.toggle("fa-thumbs-down");
+
     if(+window.localStorage.getItem('Throne Room')){
       $("html").toggleClass("Throne Room")
     }
@@ -234,6 +232,7 @@ function songChords(link) {
   }
   function song10Like(x) {
     x.classList.toggle("fa-thumbs-down");
+
     if(+window.localStorage.getItem('Way Maker')){
       $("html").toggleClass("Way Maker")
     }
@@ -244,4 +243,4 @@ function songChords(link) {
       window.localStorage.setItem('Way Maker', 'unliked');
     }
   }
-
+  // Can Clear Storage once a song has been liked / unliked
