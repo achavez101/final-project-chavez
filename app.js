@@ -50,15 +50,21 @@ function songChords(link) {
 
   // Function for Likes
   function songLikes(likeButton) {
+
     likeButton = document.getElementById('likes');
     let clickCount = 0;
     let display = document.getElementById('clickCount');
+
+    // if(localStorage.getItem("Total Likes")){
+    //   clickCount = parseInt(localStorage.getItem("Total Likes"))
+    // }
+    
     // if(localStorage.getItem("likes") == []){
     //   clickCount++;
     // }
-
-    localStorage.setItem('Total Likes', list[clickCount].likes);
-    display.innerHTML = ('Total Likes', list[clickCount].likes);
+    window.localStorage.setItem("Total Likes", list[clickCount].likes);
+    display.innerHTML = ("Total Likes", list[clickCount].likes);
+    // list[clickCount].likes
     list[clickCount].likes++;
   }
   
@@ -80,7 +86,7 @@ function songChords(link) {
   });
 
   // Bottom Portion
-  // Song Button Info at Bottom
+  // More Info
   function song1() {
     // access list array portions to place into a paragraph tag that provides further information on songs
     document.getElementById("genre").innerHTML = "Song Name: " + list[0].song + "<br> Author: " + list[0].author + "<br> Year Released: " + list[0].year + "<br> Genre: " + list[0].genre;
